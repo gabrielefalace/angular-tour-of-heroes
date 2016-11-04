@@ -11,8 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
-var hero_detail_component_1 = require('./hero-detail.component');
 var app_component_1 = require('./app.component');
+var hero_detail_component_1 = require('./hero-detail.component');
+var heroes_component_1 = require('./heroes.component');
+var hero_service_1 = require('./hero.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,11 +26,13 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                hero_detail_component_1.HeroDetailComponent
+                hero_detail_component_1.HeroDetailComponent,
+                heroes_component_1.HeroesComponent
             ],
-            bootstrap: [
-                app_component_1.AppComponent
-            ]
+            providers: [
+                hero_service_1.HeroService
+            ],
+            bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
